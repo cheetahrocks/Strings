@@ -1,0 +1,19 @@
+//program to count number of words in a string
+import java.io.*;
+import java.util.*;
+class str
+{
+	public static void main(String args[])
+	{
+		String str="    cat is   pretty";
+		int c=0;
+		StringTokenizer st=new StringTokenizer(str," ");
+		while(st.hasMoreTokens())
+		{
+			System.out.println(st.nextToken());
+			c++;
+			
+		}
+		System.out.println(c);
+	}
+}
