@@ -1,0 +1,17 @@
+//Program to find if a palindromic substring is a part of a string 
+import java.io.*;
+import java.util.*;
+class stringpalindrome
+{
+	public static void main(String args[])
+	{
+		
+		String str1="civic";
+		String sub="ivi";
+		if(str1.contains(sub))
+			System.out.println("yes");
+		else
+			System.out.println("no");
+		
+		}
+}
