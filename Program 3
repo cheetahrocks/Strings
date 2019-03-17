@@ -1,0 +1,39 @@
+//Program to find groups of anagrams from a string array.
+import java.io.*;
+import java.util.*;
+class groupanagram
+{
+	public static void main(String args[])
+	{
+		
+		String str1[]={"more","eats","rome","orem","seat"};
+		String s;
+		String s2[]=new String[50];
+		for(int i=0;i<str1.length;i++)
+		{
+			s2[i]=sortString(str1[i]);	
+			System.out.print(s2[i]+" ");
+		}
+		Map<String,Integer> hm=new HashMap<>();
+		for(int i=0;i<str1.length;i++)
+		{
+			Integer count=hm.get(s2[i]);
+			if(count == null)
+				hm.put(s2[i],1);
+			else
+				hm.put(s2[i],count+1);
+		}
+		System.out.println("\n The groups with their size: "+hm);
+	}
+	public static String sortString(String inputString) 
+    { 
+        // convert input string to char array 
+        char tempArray[] = inputString.toCharArray(); 
+          
+        // sort tempArray 
+        Arrays.sort(tempArray); 
+          
+        // return new sorted string 
+        return new String(tempArray); 
+    } 
+}
